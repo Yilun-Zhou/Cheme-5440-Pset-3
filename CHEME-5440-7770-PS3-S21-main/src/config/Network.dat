@@ -1,0 +1,27 @@
+# construct the  stoichiometric matrix S for  the  urea  cycle
+# rows of matrix S represent chemical species, row 1 to row 18 correspond to
+# aspartate, ATP, citruline, diphosprate, AMP, orgininosuccinate, fumarate, arginine, H2O, urea, ornithine,
+# carbamoyl phosphate, phosphate, nitric oxide, NADP+, NADPH, H+, O2
+# columns of matrix S represent chemical reactions, column 1 to column 6 correspond to reaction
+# 6.3.4.5; 4.3.2.1;3.5.3.1;2.1.3.3;1.14.13.39;1.14.13.39
+# column 7 to column 13 represent imports and exports
+
+stoichiometric_matrix = [-1  0  0  0 0  0  0  1  0  0 0 0  0 0  0  0 0 0 0 0 0;
+           -1  0  0  0 0  0  0  0  0  0 1 0  0 0  0  0 0 0 0 0 0;
+           -1  0  0  1 2 -2  0  0  0  0 0 0  0 0  0  0 0 0 0 0 0;
+           1   0  0  0 0  0  0  0  0  0 0 -1 0 0  0  0 0 0 0 0 0;
+           1   0  0  0 0  0  0  0  0  0 0 0 -1 0  0  0 0 0 0 0 0;
+           1  -1  0  0 0  0  0  0  0  0 0 0  0 0  0  0 0 0 0 0 0;
+           0   1  0  0 0  0  0  0 -1  0 0 0  0 0  0  0 0 0 0 0 0;
+           0   1 -1  0 -2 2  0  0  0  0 0 0  0 0  0  0 0 0 0 0 0;
+           0   0 -1  0 4 -4  0  0  0  0 0 0  0 0  0  0 0 0 0 1 -1;
+           0   0  1  0 0  0  0  0  0 -1 0 0  0 0  0  0 0 0 0 0 0;
+           0   0  1 -1 0  0  0  0  0  0 0 0  0 0  0  0 0 0 0 0 0;
+           0   0  0 -1 0  0  1  0  0  0 0 0  0 0  0  0 0 0 0 0 0;
+           0   0  0  1 0  0  0  0  0  0 0 0  0 -1 0  0 0 0 0 0 0;
+           0   0  0  0 2 -2  0  0  0  0 0 0  0 0 -1  0 0 0 0 0 0;
+           0   0  0  0 3 -3  0  0  0  0 0 0  0 0  0 -1 0 0 0 0 0;
+           0   0  0  0 -3 3  0  0  0  0 0 0  0 0  0  0 1 0 0 0 0;
+           0   0  0  0 -3 3  0  0  0  0 0 0  0 0  0  0 0 1 0 0 0;
+           0   0  0  0 -4 4  0  0  0  0 0 0  0 0  0  0 0 0 1 0 0;
+           ]
